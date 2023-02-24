@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <img src="imagenes/vecefar.png" alt="" style="width: 470px;">
+        <img src="imagenes/vecefar.png" alt="" style="width: 527px;">
     </div>
      
     <div>
