@@ -11,7 +11,7 @@ else{
 
 include "header.php";
 ?>
-
+<body>
 <main class="d-flex flex-nowrap">
     <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
       <span class="fs-4"><img src="imagenes/vecefar.png" alt="" style="width: 240px;"></span>
@@ -65,15 +65,22 @@ include "header.php";
 
   <div class="b-example-divider b-example-vr"></div>
 
+  <div class="container p-3">
+            <div class="row">
+                <div class="col12">
+                <h1 style="margin-left: 434px;padding: 31px;">Nueva Droga</h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <form action="car_drog.php">
+                    <div class="row">
+                      <div class="col-4" style="width: unset;"><input type=number name=id placeholder="cod Droga" required></div>
+                      <div class="col-4" style="width: unset;"><input type=text name=comp placeholder="Componentes" required></div>
+                      <div class="col-4" style="width: unset;"><input type=number name=dosis placeholder="Dosis 1.0" step="0.01" min="0" max="2000" required></div>
+                      <button class="btn-info" type="submit" href="carga.php">Cargar Droga</button>
+                  </form> 
 </main>
-
-
-    <form>
-          Codigo de Droga<input type=number name=id required><br><br>
-          Componentes <input type=text name=comp required><br><br>
-          Dosis<input type=number name=dosis placeholder="1.0" step="0.01" min="0" max="2000" required><br><br>
-          <input type=submit name=car_dro><br>
-    </form>
 
     
 <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

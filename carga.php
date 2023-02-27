@@ -25,4 +25,6 @@ if(mysqli_affected_rows($conn)>0){
     
     echo "No se pudo cargar al cliente $nom $ape";
     }
+
+    header("location:nuevoemp.php");
 ?>

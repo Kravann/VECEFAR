@@ -11,7 +11,7 @@ else{
 
 include "header.php";
 ?>
-
+<body>
 <main class="d-flex flex-nowrap">
     <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
       <span class="fs-4"><img src="imagenes/vecefar.png" alt="" style="width: 240px;"></span>

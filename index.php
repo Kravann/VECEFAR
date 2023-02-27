@@ -16,8 +16,8 @@
         <form action=loggin.php >
             <div class="wrapper">
                 <div class="loggin">
-                    <input type="text" name="usuario" placeholder="User" />
-                    <input type="password" name="contra" placeholder="Password" />
+                    <input type="text" name="usuario" placeholder="User" style="width: 100%;">
+                    <input type="password" name="contra" placeholder="Password" style="width: 100%;">
                     <button class="btn" type="submit" value="Loggin" name="aceptar">Ingresar</button>
                 </div>
             </div>
