@@ -9,8 +9,8 @@ else{
     exit();
 }
 
+include "header.php";
 ?>
-<?php include "header.php"; ?>
 
 <main class="d-flex flex-nowrap">
     <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
@@ -72,38 +72,3 @@ else{
 
 </body>
 </html>
-
-<?php
- if(isset($_GET['prod'])){
- require "producto.php";
-  }
- if(isset($_GET['ALT'])){
-  require "alta_prod.php";
-    
- }
- if(isset($_GET['lab'])){
- require "laboratorio.php";
- }
- if(isset($_GET['alta_lab'])){
-     require "alta_lab.php";
-  }
- if(isset($_GET['emp'])){
-     require "nuevoemp.php";
- }
- if(isset($_GET['alta'])){
-     require "carga.php";
- }
- if(isset($_GET['drog'])){
-     require "droga.php";
- }
- if(isset($_GET['car_dro'])){
-     require "car_drog.php";
- }
- if(isset($_GET['lote'])){
-     require "lote.php";
- }
- if(isset($_GET['alt_lote'])){
-     require "alta_lote.php";
- }
-
-?>
