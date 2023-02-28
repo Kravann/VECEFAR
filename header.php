@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="icon/css/fontawesome.min.css">
         <meta name="theme-color" content="#712cf9">
 
-        <style>
+    <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -63,7 +63,7 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
         }
-        </style>
+    </style>
 
         
         <!-- Custom styles for this template -->
