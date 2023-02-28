@@ -1,0 +1,70 @@
+body {
+  background-color: #eee;
+}
+
+.wrapper {
+  height: 120px;
+  margin: 60px auto;
+  position: relative;
+  width: 528px;
+  z-index: 1;
+}
+
+.loggin {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px #dbdcde;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+input[type=text], 
+input[type=number],
+input[type=password],
+.select {
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid #dbdcde;
+  box-sizing: border-box;
+  color: #505E67;
+  display: inline-block;
+  font-size: 16px;
+  height: 55px;
+  margin: 0 0 20px;
+  padding: 4px 10px;
+  max-width: 560px;
+  transition: box-shadow 200ms;
+  vertical-align: top;
+  /* width: 100%; */
+}
+input[type=text]:hover, input[type=text]:active, input[type=text]:focus,
+input[type=password]:hover,
+input[type=password]:active,
+input[type=password]:focus,
+input[type=number]:hover, input[type=number]:active, input[type=number]:focus {
+  border-color: #546a78;
+  outline: none;
+}
+
+button {
+  background-color: #0c7ac0;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  height: 55px;
+  margin: 15px 10px 15px 0;
+  padding: 11px;
+  min-width: 100px;
+  text-align: center;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+  width: 100%;
+  position: relative;
+}
+button:hover {
+  background: #085586;
+}

@@ -5,8 +5,9 @@ if(isset($_SESSION['id']) && $_SESSION['tipoUsuario']==2){
 
 }
 else{
-    echo"Pagina Prohibida. Inicie Sesion";
-    exit();
+    echo"Pagina Prohibida. Inicie Sesion";?>
+    <br><br><a href="index.php">Iniciar sesion</a>
+ <?php   exit();
 }
 
 ?>
