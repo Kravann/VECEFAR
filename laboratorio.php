@@ -5,8 +5,9 @@ if(isset($_SESSION['id']) && $_SESSION['tipoUsuario']==1){
 
 }
 else{
-    echo"Pagina Prohibida. Inicie Sesion";
-    exit();
+  echo"Pagina Prohibida. Inicie Sesion";?>
+  <br><br><a href="index.php">Iniciar sesion</a>
+<?php   exit();
 }
 
 include "header.php";
@@ -64,6 +65,33 @@ include "header.php";
   </div>
 
   <div class="b-example-divider b-example-vr"></div>
+
+  <div class="container p-3">
+            <div class="row">
+                <div class="col12">
+                <h1 style="margin-left: 434px;padding: 31px;">Nuevo Laboratorio </h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <form action="alta_lab.php">
+                  <div class="row">
+                      <div class="col-6" style="width: unset;"><input type=number name=id placeholder="ID Laboratorio" required></div>
+                      <div class="col-6" style="width: unset;"><input type=text name=lab placeholder="Nombre" required></div>
+                  </div>
+                    
+                  <button class="btn-info" type="submit">Alta Laboratorio</button>
+                </form>
+            </div>
+        </div>
+  <div class="col-sm-12">
+    <?php if(isset($_SESSION['mensaje'])){ ?>
+        <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?> alert-dismissible fade show" role="alert">
+            <?= $_SESSION['mensaje'] ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="margin-top: 20px;padding: unset;"></button>
+        </div>
+    <?php session_unset();} ?>
+  </div> 
 
 </main>
 

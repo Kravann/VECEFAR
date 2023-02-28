@@ -5,8 +5,9 @@ if(isset($_SESSION['id']) && $_SESSION['tipoUsuario']==1){
 
 }
 else{
-    echo"Pagina Prohibida. Inicie Sesion";
-    exit();
+  echo"Pagina Prohibida. Inicie Sesion";?>
+  <br><br><a href="index.php">Iniciar sesion</a>
+<?php   exit();
 }
 
 include "header.php";
@@ -79,7 +80,15 @@ include "header.php";
                       <div class="col-4" style="width: unset;"><input type=text name=comp placeholder="Componentes" required></div>
                       <div class="col-4" style="width: unset;"><input type=number name=dosis placeholder="Dosis 1.0" step="0.01" min="0" max="2000" required></div>
                       <button class="btn-info" type="submit" href="carga.php">Cargar Droga</button>
-                  </form> 
+                  </form>
+  <div class="col-sm-12">
+    <?php if(isset($_SESSION['mensaje'])){ ?>
+        <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?> alert-dismissible fade show" role="alert">
+            <?= $_SESSION['mensaje'] ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="margin-top: 20px;padding: unset;"></button>
+        </div>
+    <?php session_unset();} ?>
+  </div> 
 </main>
 
     

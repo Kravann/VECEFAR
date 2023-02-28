@@ -5,8 +5,9 @@ if(isset($_SESSION['id']) && $_SESSION['tipoUsuario']==1){
 
 }
 else{
-    echo"Pagina Prohibida. Inicie Sesion";
-    exit();
+  echo"Pagina Prohibida. Inicie Sesion";?>
+  <br><br><a href="index.php">Iniciar sesion</a>
+<?php   exit();
 }
 
 include "header.php";
@@ -65,39 +66,56 @@ include "header.php";
 
   <div class="b-example-divider b-example-vr"></div>
 
+  <div class="container p-3">
+      <div class="row">
+          <div class="col12">
+          <h1 style="margin-left: 434px;padding: 31px;">Nuevo Lote </h1>
+          </div>
+      </div>
+      
+      <div class="row">
+          <form action="alta_lote.php">
+              <div class="row">
+                  <div class="col-4" style="width: unset;"><input type=number name=id placeholder="Numero de Lote" required></div>
+                  <div class="col-4" style="width: unset;">
+                    <label for="fec_in" style="padding-top: 15px;">Fecha Ingreso</label>
+                    <input type=date name=fec_in placeholder="Fecha de Ingreso" class="select" required>
+                  </div>
+                  <div class="col-4" style="width: unset;">
+                    <label for="venc" style="padding-top: 15px;">Fecha Vencimiento</label>
+                    <input type=date name=venc placeholder="Fecha de Vencimiento" class="select" required>
+                  </div>
+                  <div class="col-3" style="width: unset;"><input type=number name=cant placeholder="Cantidad" required></div>
+              </div>
+              <div class="row">
+                  <div class="col-3"><select name="producto" class="select">
+                                            <?php
+                                      require "conect.php";
+                                      $pro="SELECT * FROM productos INNER JOIN droga on productos.droga_id=droga.droga_id";
+                                    
+                                      $res=mysqli_query($conn,$pro);
+                                      if(mysqli_affected_rows($conn)>0){
+                                          while($fila=mysqli_fetch_assoc($res)){
+
+                                      ?>
+
+                                  <option value=<?php echo $fila["prod_id"] ?>><?php echo $fila["prod_marca"] ?> ,
+                                  <?php echo $fila["dro_componentes"] ?>   <?php echo $fila["dro_dosis"] ?>  </option>
+
+                                  <?php
+                                      }
+                                    }
+                                  ?>
+                      </select>
+                    </div>
+              </div>
+          <button class="btn-info" type="submit">Alta Lote</button>
+          </form>
+      </div>
+    </div>
+
 </main>
-
-
-    <form>
-        Numero de Lote<input type=number name=id required><br><br>
-        Fecha de Ingreso<input type=date name=fec_in required><br><br>
-        Fecha de Vencimiento<input type=date name=venc required><br><br>
-        Cantidad<input type=number name=cant required><br><br>
-        Producto<select name=producto>
-            <?php
-            require "conect.php";
-            $pro="SELECT * FROM productos INNER JOIN droga on productos.droga_id=droga.droga_id";
-          
-            $res=mysqli_query($conn,$pro);
-            if(mysqli_affected_rows($conn)>0){
-                while($fila=mysqli_fetch_assoc($res)){
-
-            ?>
-
-        <option value=<?php echo $fila["prod_id"] ?>><?php echo $fila["prod_marca"] ?> ,
-         <?php echo $fila["dro_componentes"] ?>   <?php echo $fila["dro_dosis"] ?>  </option>
-
-        <?php
-            }
-          }
-        ?>
-        </select><br><br>
-        
-        <input type=submit name=alt_lote value="Cargar Lote">
-
-    </form>
-
-    
+  
 <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script src="https://getbootstrap.com/docs/5.3/examples/sidebars/sidebars.js"></script>
 

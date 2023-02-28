@@ -1,4 +1,5 @@
 <?php
+session_start();
 $id=$_GET['id'];
 $lab=$_GET['lab'];
 
@@ -11,12 +12,19 @@ $resulset=mysqli_query($conn,$SQL);
 
 if(mysqli_affected_rows($conn)>0){
 
-    echo "El laboratorio $lab fue cargado con exito";
+    $_SESSION['mensaje'] = "El laboratorio $lab fue cargado con exito";
+    $_SESSION['tipo_mensaje'] = 'success';
+    if ($resulset){
+        header("location: laboratorio.php");
+    }
     
     }
     else{
-    
-    echo "No se pudo cargar el laboratorio $lab";
+   
+    $_SESSION['mensaje'] = "No se pudo cargar el laboratorio $lab";
+    $_SESSION['tipo_mensaje'] = 'danger';
+    if ($resulset){
+        header("location: laboratorio.php");
     }
-
+    }
 ?>

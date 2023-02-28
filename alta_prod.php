@@ -1,4 +1,5 @@
 <?php
+session_start();
 $id=$_GET['id'];
 $marca=$_GET['marca'];
 $act=0;
@@ -18,11 +19,20 @@ $resulset=mysqli_query($conn,$s);
 
 if(mysqli_affected_rows($conn)>0){
 
-    echo "El producto de la marca $marca se cargo exitosamente";
+    $_SESSION['mensaje'] = "El producto de la marca $marca se cargo exitosamente";
+    $_SESSION['tipo_mensaje'] = 'success';
+    if ($resulset){
+        header("location: producto.php");
+    }
     
     }
     else{
-    echo "No se pudo cargar el producto de $marca";
+   
+    $_SESSION['mensaje'] = "No se pudo cargar el producto de $marca";
+    $_SESSION['tipo_mensaje'] = 'danger';
+    if ($resulset){
+        header("location: producto.php");
     }
-
+    }
+    
 ?>
