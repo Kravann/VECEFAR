@@ -100,7 +100,7 @@ include "header.php";
                 <?= $_SESSION['mensaje'] ?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="margin-top: 20px;padding: unset;"></button>
             </div>
-        <?php session_unset();} ?>
+        <?php}// session_unset(); ?>
     </div> 
 </main>
 
