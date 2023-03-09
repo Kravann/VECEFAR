@@ -84,17 +84,17 @@ include "header.php";
                 </form>
             </div>
         </div>
-  <div class="col-sm-12">
+ 
+</main>
+ <div class="col-sm-12">
     <?php if(isset($_SESSION['mensaje'])){ ?>
         <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?> alert-dismissible fade show" role="alert">
-            <?= $_SESSION['mensaje'] ?>
+            <?= $_SESSION['mensaje']; ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="margin-top: 20px;padding: unset;"></button>
         </div>
-    <?php }//session_unset(); ?>
+    <?php }
+    //session_unset(); ?>
   </div> 
-
-</main>
-
 
     <form>
      ID Laboratorio<input type=number name=id required><br><br>
