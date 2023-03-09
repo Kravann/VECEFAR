@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['id']) && $_SESSION['tipoUsuario']==1){
+if(isset($_SESSION['id']) && $_SESSION['tipoUsuario']==2){
 //todo ok
 }
 else{
@@ -24,19 +24,19 @@ include "header.php";
           Nuevo Producto
         </a>
       </li>
-	  <li>
+	  <!-- <li>
         <a href="droga.php" class="nav-link text-white">
         <i class="fa-solid fa-capsules" width="16" height="16"></i>
           Nueva Droga
         </a>
-      </li>
+      </li> -->
       <li>
-        <a href="lote.php" class="nav-link text-white">
+        <a href="emp_lote.php" class="nav-link text-white">
         <i class="fa-solid fa-box" width="16" height="16"></i>
           Nuevo Lote
         </a>
       </li>
-	  <li>
+	  <!-- <li>
         <a href="laboratorio.php" class="nav-link text-white">
         <i class="fa-solid fa-industry" width="16" height="16"></i>
           Nuevo laboratorio
@@ -47,13 +47,13 @@ include "header.php";
             <i class="fa-solid fa-user-plus" width="16" height="16"></i>
           Nuevo Empleado
         </a>
-      </li>
+      </li> -->
     </ul>
     <hr>
     <div class="dropdown">
       <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="imagenes/v.png" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong>Admin</strong>
+        <strong>User</strong>
       </a>
       <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
         <li><a class="dropdown-item" href="#">Mi perfil</a></li>
