@@ -84,9 +84,9 @@ include "header.php";
                 </form>
             </div>
         </div>
- 
+
 </main>
- <div class="col-sm-12">
+  <div class="col-sm-12">
     <?php if(isset($_SESSION['mensaje'])){ ?>
         <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?> alert-dismissible fade show" role="alert">
             <?= $_SESSION['mensaje']; ?>
@@ -97,9 +97,9 @@ include "header.php";
   </div> 
 
     <form>
-     ID Laboratorio<input type=number name=id required><br><br>
-     Nombre<input type=text name=lab required><br><br>
-     <input type=submit name=alta_lab>
+      ID Laboratorio<input type=number name=id required><br><br>
+      Nombre<input type=text name=lab required><br><br>
+      <input type=submit name=alta_lab>
     </form>
 
     

@@ -1,15 +1,17 @@
 <?php
-session_start();
-if(isset($_SESSION['id']) && $_SESSION['tipoUsuario']==1){
-//todo ok
+    session_start();
+    if(isset($_SESSION['id']) && $_SESSION['tipoUsuario']==1){
+    //todo ok
 
-}
-else{
-    echo"Pagina Prohibida. Inicie Sesion";?>
-    <br><br><a href="index.php">Iniciar sesion</a>
- <?php   exit();
-}
-include "header.php";
+    }
+    else{
+        echo"Pagina Prohibida. Inicie Sesion";
+?>
+<br><br><a href="index.php">Iniciar sesion</a>
+<?php   
+    exit();
+    }
+    include "header.php";
 ?>
 <body>
 <main class="d-flex flex-nowrap">
