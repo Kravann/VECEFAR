@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
     $id=$_GET['id'];
     $fec_in=$_GET['fec_in'];
     $ven=$_GET['venc'];
@@ -28,19 +28,17 @@ session_start();
 
     if(mysqli_affected_rows($conn)>0){
         $_SESSION['mensaje'] = "El lote se cargo exitosamente";
-    $_SESSION['tipo_mensaje'] = 'success';
-    if ($resulset){
-        header("location: lote.php");
-    }
-    
+        $_SESSION['tipo_mensaje'] = 'success';
+        if ($resulset){
+            header("location: lote.php");
+        }
     }
     else{
-   
-    $_SESSION['mensaje'] = "No se pudo cargar el lote";
-    $_SESSION['tipo_mensaje'] = 'danger';
-    if ($resulset){
-        header("location: lote.php");
-    }
+        $_SESSION['mensaje'] = "No se pudo cargar el lote";
+        $_SESSION['tipo_mensaje'] = 'danger';
+        if ($resulset){
+            header("location: lote.php");
+        }
     }
 
 ?>

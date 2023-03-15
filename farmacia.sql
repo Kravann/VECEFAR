@@ -22,7 +22,9 @@ create table empleados(
     foreign key (rol_id) references rol (rol_id)
 );
 select*from empleados;
-insert into empleados value(100,"fernando","torres",35136932,1131510849,"nando90","delfina",1);
+insert into empleados value(100,"fernando","torres",35136932,1131510849,"ftorres","ft123",1);
+insert into empleados value(49,"fernando","lemos",37865101,1130615728,"flemos","hola1",1);
+insert into empleados value(3,"juan","perez",39465782,1133545498,"jperez","j123",2);
 
 create table laboratorios(
     lab_id int (5) primary key,
