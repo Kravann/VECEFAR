@@ -102,12 +102,6 @@
       //session_unset(); ?>
     </div> 
 
-      <form>
-        ID Laboratorio<input type=number name=id required><br><br>
-        Nombre<input type=text name=lab required><br><br>
-        <input type=submit name=alta_lab>
-      </form>
-
       
   <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="https://getbootstrap.com/docs/5.3/examples/sidebars/sidebars.js"></script>
